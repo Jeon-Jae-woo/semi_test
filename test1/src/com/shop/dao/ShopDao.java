@@ -22,10 +22,10 @@ public class ShopDao {
 		
 		try {
 			pstm = con.prepareStatement(sql);
-			System.out.println("03. query 준비: " + sql);
+			System.out.println("03. query 以�鍮�: " + sql);
 			
 			rs = pstm.executeQuery();
-			System.out.println("04. query 실행 및 리턴");
+			System.out.println("04. query �떎�뻾 諛� 由ы꽩");
 			
 			while(rs.next()) {
 				ShopDto tmp = new ShopDto(rs.getInt(1), rs.getString(2), rs.getString(3),
@@ -37,12 +37,12 @@ public class ShopDao {
 			
 			
 		} catch (SQLException e) {
-			System.out.println("3/4 단계 에러"+ res);
+			System.out.println("3/4 �떒怨� �뿉�윭"+ res);
 			e.printStackTrace();
 		}finally {
 			close(rs);
 			close(pstm);
-			System.out.println("05. db 종료\n");
+			System.out.println("05. db 醫낅즺\n");
 		}
 		
 		
